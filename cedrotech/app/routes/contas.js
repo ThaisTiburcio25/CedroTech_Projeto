@@ -10,8 +10,6 @@ app.get('/contas/deleteConta/:uid', function (req, res) {
 connection.end(); 
 });
 
-
-
 app.get('/contas/edita/:uid', function (req, res) {
 
  var connection = app.infra.connectionFactory(); //abre conexao
@@ -35,8 +33,6 @@ connection.end();
     var categoriasDAO = new app.infra.CategoriasDAO(connection);
 	
 
-
-
     contasDAO.lista(function(erros,resultados){
         if(erros){
             return next(erros); 
@@ -52,8 +48,7 @@ connection.end();
     });
 
         connection.end(); //fecha conexao
-
-        
+      
  });
 
     app.get('/contas/form', function(req,res){
@@ -75,9 +70,7 @@ connection.end();
 
     connection.end(); //fecha conexao
 
-
 });
-
 
 app.post('/contas/atualizar',function(req,res){
     
