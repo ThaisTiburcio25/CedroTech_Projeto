@@ -54,22 +54,6 @@ connection.end();
         connection.end(); //fecha conexao
 
         
-    // categoriasDAO.lista(function(erros,resultados){
-//         if(erros){
-//             return next(erros); 
-//         }
-//         res.format({
-//             html: function(){
-//                 res.render('contas/form',{lista:resultados});
-   
-//             },
-//             json: function(){
-//                 res.json(resultados);
-//             }
-//         });
-//     });
-
-//     connection.end(); //fecha conexao
  });
 
     app.get('/contas/form', function(req,res){
@@ -153,12 +137,3 @@ app.post('/contas',function(req,res){
 });
 }
 
-// app.get('contas/remove',function(){
-//     var connection = app.infra.connectionFactory();
-//     var contasBanco = app.infra.contasBanco(connection);
-//     var contas = contasBanco.carrega(id,callback);
-
-//     if(contas){
-//         contasBanco.remove(contas,callback);
-//     }
-// })
